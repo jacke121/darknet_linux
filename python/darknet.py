@@ -150,7 +150,12 @@ if __name__ == "__main__":
     #print r[:10]
     net = load_net(b"../cfg/yolov3.cfg", b"yolov3.weights", 0)
     meta = load_meta(b"../cfg/coco.data")
-    r = detect(net, meta, b"../data/dog.jpg")
-    print("1111111111111",r)
-    
+    import datetime
+
+    for i in range(1000):
+        time_old=datetime.datetime.now()
+
+        r = detect(net, meta, b"../data/dog.jpg")
+        print(r)
+        print('requests', (datetime.datetime.now() - time_old).microseconds)
 
