@@ -26,3 +26,8 @@ Icon?
 Thumbs.db
 *.swp
 *.weights
+backup/
+VOCdevkit/
+*.tar
+*.74
+.idea/
